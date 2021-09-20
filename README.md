@@ -99,6 +99,7 @@ Click OK for confirming the permission update
 <br/><br/>
 
 Deploy the API again for publish the permission updated
+
 <img src="./images/deploy.png" alt="Deploy" width="50%"/>
 <br/><br/>
 
