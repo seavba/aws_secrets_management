@@ -23,21 +23,30 @@ The infrastructure provided by this repo consists on:
  - images folder is a directory dedicated to keep the images of this README file.
  - credentials.json file it's a JSON file containting the credentials data like username, password, environment where the password is used and the desidered name for the secret.
 
-## Variables
 
-All the variables are already set in the variables file but they can be changed as your preference.
+ ## Getting Started
 
-```
-aws_region: AWS region where the code can be executed.
-iam_policy_arn: Array for aws policies to be attached to the IAM role.
-credentials_file: Set credentials file path.
-encrypted_file: Set encrypted_file path.
-api_name: Set the desidered API name.
-http_method: Set the API HTTP METHOD, by default the value is POST but also can be set PUT.
-stage_name: Set the desidered API stage name.
-function_name: Set Lambda function name.
-python_runtime: Set the python version for running lambda function.
-```
+ #### Pre-requisites
+
+- AWS CLI must be already configured. If not, try [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
+
+- The Terraform code has been wrote with Terraform v0.15.3.
+
+
+#### Deploy infrastructure
+
+ For deploying the insfrastructure the following commands must be executed:
+
+ ```
+ cd /your/repo/path
+ git clone  git@github.com:seavba/aws_secrets_management.git
+ cd aws_secrets_management/iac && terraform init && terraform apply -auto-approve
+ ```
+
+
+#### Variables
+ All the variables to be customised (if needed) can be found in [variables.tf](https://github.com/seavba/aws_secrets_management/blob/main/iac/variables.tf) file.
+
 
 #### output vars
 As output variables are set two commands:
